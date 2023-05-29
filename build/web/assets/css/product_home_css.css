@@ -1,0 +1,373 @@
+.margin-for-div {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.banner-content > img {
+  width: 100%;
+}
+
+/* box-content */
+.box-content-wrap {
+  display: flex;
+  width: 28.5rem;
+  height: 7rem;
+  margin-right: 2rem;
+  justify-items: center;
+}
+
+.sticker-content {
+  text-align: center;
+  padding-top: 1.2rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.sticker-content > img {
+  width: 6rem;
+  height: 5rem;
+}
+.box-content {
+  margin-top: 1rem;
+}
+
+.main-content {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.sub-content {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.content-outside {
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+/* all-categories */
+.all-categories {
+  width: 100%;
+  height: 57.5rem;
+  background-image: url("chair-art.png ");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 7rem;
+}
+
+.list-categories {
+  width: 18rem;
+  height: 18rem;
+}
+
+.all-categories > h1 {
+  font-size: 4rem;
+}
+
+.categories-link {
+  list-style: none;
+}
+
+.list-categories > ul > li {
+  list-style: none;
+}
+
+.categories-link:hover a {
+  border-bottom: 2px solid black;
+}
+
+.link-lv1,
+.link-lv2 {
+  text-decoration: none;
+}
+
+.link-lv1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+.link-lv2 {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.section1 {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+  color: gray;
+  margin-bottom: 3rem;
+}
+
+.section1-top {
+  margin-bottom: 4rem;
+}
+
+.main-title {
+  color: black;
+  font-size: 3.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.main-title > span {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid black;
+}
+
+.product-thumbnail {
+  width: 100%;
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* product-item */
+.thumbnail-wrap {
+  position: relative;
+}
+
+.img-link {
+  width: 100%;
+  height: 30rem;
+}
+
+/* .img-product-wrap{
+  position: absolute;
+} */
+
+.img-product-wrap > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .img-lv2, .img-lv3{
+  display: none;
+  position: absolute;
+} */
+
+/* .nothing{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #555;
+  top: 0;
+} */
+
+.nothing-item {
+  width: 11rem;
+}
+
+.lv1:hover .img-lv1,
+.lv2:hover .img-lv2,
+.lv3:hover .img-lv3 {
+  display: block;
+}
+
+.text-action {
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+}
+
+.text-action:hover {
+  background-color: #e8e8e8;
+}
+.footer-inner {
+  display: none;
+}
+
+.product-favourite {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  width: 4rem;
+  height: 16rem;
+  background-color: white;
+}
+
+.product-favourite > li {
+  width: 37px;
+  height: 37px;
+  line-height: 40px;
+}
+
+.product-favourite > li:hover {
+  background-color: #e8e8e8;
+}
+
+.thumbnail-wrap:hover .footer-inner {
+  display: block;
+  cursor: pointer;
+}
+
+.product-item:hover .footer-inner {
+  display: block;
+}
+
+/* product-footer */
+.product-footer {
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  text-align: left;
+  gap: 0.1rem;
+}
+
+.product-category > a,
+.product-name > a {
+  color: #555;
+  text-decoration: none;
+}
+
+.product-category > a {
+  font-size: 1.3rem;
+}
+
+.product-name > a,
+.product-price {
+  color: black;
+}
+
+.product-name > a {
+  font-size: 2.3rem;
+}
+
+/* product-deal */
+.deal-info {
+  width: 50.4rem;
+}
+
+.deal-info > h2 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.deal-info > span {
+  font-size: 1.7rem;
+  color: #555;
+}
+
+.deal-info-button {
+  width: 19.3rem;
+  height: 5.1rem;
+  background-color: black;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.deal-info-button > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 5.1rem;
+}
+
+.deal-info-button:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.deal-info-button:hover a {
+  color: black;
+}
+
+.product-deal {
+  margin-bottom: 2rem;
+}
+.deal-img {
+  width: 72.6rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.deal-img > img {
+  width: 72rem;
+}
+
+.hover-img {
+  transition: transform ease-in 0.5s;
+  will-change: transfrom;
+}
+
+.hover-img:hover {
+  transform: scale(1.1);
+}
+
+.product-deal {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* categories-slide */
+.categories-slide-row {
+  display: flex;
+  justify-content: center;
+}
+.categories-slide-wrap {
+  width: 28.3rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.img-frame > a > img {
+  width: 100%;
+  height: 23.1rem;
+}
+
+.selection-categories {
+  line-height: 7rem;
+}
+
+.selection-categories > a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.img-frame {
+  width: 100%;
+  height: 23.1rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.logo-slide {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-wrap {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 10rem;
+}
+
+.logo-img {
+  opacity: 0.5;
+}
+
+.logo-img:hover {
+  opacity: 1;
+}

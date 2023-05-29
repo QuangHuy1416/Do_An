@@ -1,0 +1,287 @@
+.shopping-cart-header{
+    height: 8.1rem;
+    padding: 2rem;
+}
+
+.action-item, .shopping-cart-action > span{
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+.shopping-cart-action{
+    display: flex;
+    justify-content: space-between;
+}
+.action-item{
+    display: flex;
+}
+
+.action-number{
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.7rem;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.first-action > .action-number{
+    color: white;
+    background-color: black;
+}
+
+.second-action{
+    color: #555;
+}
+
+.shopping-cart-action > span{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* shopping-cart-wrap */
+.shopping-cart-wrap{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.before-cart-item{
+    width: 70.5rem;
+    height: 8.5rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+}
+
+.before-cart-item > p {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 4.5rem;
+}
+
+.before-cart-item-top{
+    display: flex;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.before-cart-item-top > img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.cart-progress-bar{
+    width: 66.5rem;
+    height: 2.2rem;
+}
+
+/* product-list */
+.product-list > table{
+    width: 70.5rem;
+}   
+
+tr:first-child{
+   height: 4rem;
+}
+
+th, tr > .product-price{
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+td > span, .remove-product, .product-quantity > input{
+    font-size: 1.4rem;
+}
+
+td > span{
+    color: #555;
+}
+
+.product-detail > .product-detail-wrap{
+    width: 30.3rem;
+}
+
+.product-detail-wrap{
+    display: flex;
+}
+
+.product-img > img{
+    width: 8rem;
+    height: 8rem;
+}
+
+.product-name-wrap > a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.product-price, .product-sku,.product-quantity{
+    text-align: center;
+}
+
+.product-price{
+    width: 7.3rem;
+}
+
+.product-sku{
+    width: 11.8rem;
+}
+
+.product-quantity{
+    width: 12.6rem;
+}
+
+.product-quantity > input{
+    width: 6rem;
+    height: 3.8rem;
+    text-align: center;
+}
+
+.product-subtotal{
+    width: 8.5rem;
+    text-align: right;
+}
+
+.product-name{
+    line-height: 5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.remove-product > span{
+    border-bottom: 1px solid black;
+}
+
+/* action-clear */
+.action-clear{
+    width: 70.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon-code{
+    width: 33.7rem;
+    height: 3.7rem;
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    margin-right: 0;
+}
+
+.coupon-btn{
+    width: 3.7rem;
+    height: 3.7rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.coupon-btn:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.shoppping-cart-btn > a{
+    text-decoration: none;
+    color: black;
+}
+
+.back-product-btn{
+    padding: 2rem 14.4rem;
+}
+.action-clear > .shoppping-cart-btn{
+    width: 23.6rem;
+    height: 3.7rem;
+    line-height: 3.7rem;
+}
+
+.shoppping-cart-btn{
+    border: 1px solid black;
+}
+
+.shoppping-cart-btn:hover > a{
+    color: white;
+}
+
+.shoppping-cart-btn:hover{
+    background-color: black;
+}
+
+/* cart-total */
+.cart-total{
+    width: 49.5rem;
+}
+
+.cart-collaterals{
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid black;
+}
+
+.checkout-btn, .shoppping-cart-btn{
+    width: 45.1rem;
+    height: 4.3rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 4.3rem;
+}
+.checkout-btn > a{
+    text-decoration: none;
+    color: white;
+}
+
+.checkout-btn{
+    background-color: black;
+}
+
+.checkout-btn:hover{
+    opacity: 75%;
+}
+
+.cart-subtatol, .cart-tatol{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-subtatol{
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.cart-tatol{
+    font-size: 2rem;
+}
+
+.cart-collaterals > h2, .cart-subtatol, .cart-tatol, .checkout-btn{
+    margin-bottom: 1rem;
+}
+
+/* shopping-cart-footer */
+.shopping-cart-footer{
+    height: 16.6rem;
+    color: white;
+    text-align: center;
+    padding: 5rem;
+    background-color: #222;
+}
+
+.footer-img > img{
+    width: 4.5rem;
+    height: 3.1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+footer > p {
+    font-size: 1.6rem;
+}

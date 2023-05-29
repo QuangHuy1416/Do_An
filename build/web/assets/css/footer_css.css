@@ -1,0 +1,100 @@
+.footer{
+    background-image: url("footer_img.png");
+    background-size: 138rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    /* height: 71.2rem; */
+    background-color: black;
+}
+
+footer{
+    color: white;
+}
+
+.footer p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info-wrap > h2{
+    font-size: 4rem;
+}
+
+.footer-info{
+    margin-top: 3rem;
+}
+
+.footer-link{
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.footer-link > a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link-lv1{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.footer-link-lv2{
+    font-size: 2rem;
+    margin-top: 2.8rem;
+}
+
+.footer-list > ul > li{
+    list-style: none;
+}
+
+.footer-link-lv2:hover a{
+    border-bottom: 2px solid #555;
+    color: #555;
+}
+.form-line{
+    display: flex;
+}
+.form-input{
+    padding-left: 1rem;
+    width: 44.5rem;
+    height: 5.4rem;
+    border: 1px solid white;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    background-image: url("footer_img.png");
+    margin-right: 1.5rem;
+    color: white;
+}
+
+.footer-btn{
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 14rem;
+    height: 5.4rem;
+    line-height: 3.4rem;
+}
+
+.footer-btn:hover{
+    color: #555;
+}
+
+.footer-note{
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+form > .footer-note{
+    color: white;
+}
+
+.footer-copyright{
+    color: white;
+    text-decoration: none;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    display: block;
+    width: 48.7rem;
+    height: 4.6rem;
+}

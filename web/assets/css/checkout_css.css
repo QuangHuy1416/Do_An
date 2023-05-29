@@ -1,0 +1,72 @@
+.checkout-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.bill-details{
+    width: 70.5rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+
+.bill-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text{
+    width: 33.7rem;
+    height: 4.8rem;
+}
+
+.input-info{
+    width: 70.5rem;
+    height: 4.8rem;
+}
+
+textarea{
+    width: 70.5rem;
+    height: 8.4rem;
+}
+.input-info, .input-text, textarea{
+    padding-left: 1rem;
+    font-size: 1.6rem;
+}
+
+.input-info, textarea{
+    margin-top: 2rem;
+}
+
+/* product-order */
+.product-order{
+    margin-top: 1rem;
+    height: 10.3rem;
+    line-height: 7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-order > img{
+    width: 8rem;
+    height: 8rem;
+}
+
+.product-order > .product-price{
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.product-order > .product-name, .product-quantity{
+    font-weight: normal;
+}
+
+.checkout-choise{
+    height: 5em;
+    line-height: 4.5em;
+    display: flex;
+}
+
+.check-text{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
