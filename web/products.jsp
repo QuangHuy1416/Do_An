@@ -44,7 +44,7 @@
                             <input type="hidden" name="productId" value="${product.id}"/>
                             <input type="hidden" name="productPrice" value="${product.price}"/>
                             <span class="product-category">${product.category.name}</span>
-                            <h1 class="product-name">${product.name}</h1>
+                            <h1>${product.name}</h1>
                             <div class="product-price-wrap">
                                 <span class="product-price">
                                     <fmt:setLocale value = "en_US"/>

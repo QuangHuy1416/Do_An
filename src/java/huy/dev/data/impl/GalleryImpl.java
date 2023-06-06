@@ -17,7 +17,7 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public boolean insert(Gallery gallery) {
-        String sql = "INSERT INTO GALLENIES VALUES(NULL, ?, ?)";
+        String sql = "INSERT INTO GALLERIES VALUES(NULL, ?, ?)";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, gallery.getUrl());
@@ -33,7 +33,7 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public boolean update(Gallery gallery) {
-        String sql = "UPDATE GALLENIES SET url = ?, product_id = ? WHERE id = ?";
+        String sql = "UPDATE GALLERIES SET url = ?, product_id = ? WHERE id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, gallery.getUrl());
@@ -49,7 +49,7 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public boolean delete(int galleryId) {
-        String sql = "DELETE FROM GALLENIES WHERE ID = ?";
+        String sql = "DELETE FROM GALLERIES WHERE ID = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, galleryId);
@@ -64,7 +64,7 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public Gallery find(int galleryId) {
-        String sql = "SELECT * FROM GALLENIES";
+        String sql = "SELECT * FROM GALLERIES";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
 
@@ -85,7 +85,7 @@ public class GalleryImpl implements GalleryDAO {
     @Override
     public List<Gallery> findAll() {
         List<Gallery> gallList = new ArrayList<>();
-        String sql = "SELECT * FROM GALLENIES";
+        String sql = "SELECT * FROM GALLERIES";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
 
@@ -125,6 +125,21 @@ public class GalleryImpl implements GalleryDAO {
             e.printStackTrace();
         }
         return galleryList;
+    }
+
+    @Override
+    public boolean deleteByProduct(int productId) {
+         String sql = "DELETE FROM GALLERIES WHERE product_id = ?";
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, productId);
+
+            return stmt.execute();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

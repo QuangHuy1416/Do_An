@@ -17,25 +17,31 @@ public class ProductImpl implements ProductDAO {
 
     Connection con = MySQLDriver.getInstance().getConnection();
 
-    public boolean insert(Product product) {
-        // TODO Auto-generated method stub
-        String sql = "INSERT INTO PRODUCTS VALUES(NULL, ?, ?, ?, ?, ?, ?, ?)";
+    @Override
+     public int insert(Product product) {
+        String sql = "INSERT INTO PRODUCTS(ID, NAME, DESCRIPTION, PRICE, QUANTITY, CATEGORY_ID) VALUES(NULL, ?, ?, ?, ?, ?)";
         try {
-            PreparedStatement stmt = con.prepareStatement(sql);
+            PreparedStatement stmt = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             stmt.setString(1, product.getName());
             stmt.setString(2, product.getDescription());
             stmt.setDouble(3, product.getPrice());
             stmt.setInt(4, product.getQuantity());
-            stmt.setInt(5, product.getView());
-            stmt.setInt(6, product.getCategoryId());
-            stmt.setTimestamp(7, product.getCreateAt());
+            stmt.setInt(5, product.getCategoryId());
 
             stmt.execute();
+
+            ResultSet rs = stmt.getGeneratedKeys();
+            int generatedKey = 0;
+            if (rs.next()) {
+                generatedKey = rs.getInt(1);
+            }
+
+            return generatedKey;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return false;
+        return 0;
     }
 
     @Override
@@ -90,7 +96,7 @@ public class ProductImpl implements ProductDAO {
                 int categoryId = rs.getInt("category_id");
                 Timestamp createdAt = rs.getTimestamp("created_at");
 
-                return new Product(productId, name, description, price, view, quantity, categoryId, createdAt);
+                return new Product(productId, name, description, price, quantity, view, categoryId, createdAt);
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -101,7 +107,8 @@ public class ProductImpl implements ProductDAO {
 
     @Override
     public List<Product> findAll() {
-        List<Product> productList = new ArrayList<>();
+        // TODO Auto-generated method stub
+        List<Product> proList = new ArrayList<>();
         String sql = "SELECT * FROM PRODUCTS";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -117,13 +124,13 @@ public class ProductImpl implements ProductDAO {
                 int categoryId = rs.getInt("category_id");
                 Timestamp createdAt = rs.getTimestamp("created_at");
 
-                productList.add(new Product(id, name, description, price, view, quantity, categoryId, createdAt));
+                proList.add(new Product(id, name, description, price, quantity, view, categoryId, createdAt));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return productList;
+        return proList;
     }
 
     @Override
@@ -144,7 +151,7 @@ public class ProductImpl implements ProductDAO {
                     int quantity = rs.getInt("quantity");
                     int view = rs.getInt("view");
                     Timestamp createdAt = rs.getTimestamp("created_at");
-                    productList.add(new Product(name, description, price, view, quantity, categoryId, createdAt));
+                    productList.add(new Product(id, name, description, price, quantity, view, categoryId, createdAt));
                 }
             }
         } catch (SQLException e) {
@@ -167,12 +174,12 @@ public class ProductImpl implements ProductDAO {
                 String name = rs.getString("name");
                 String description = rs.getString("description");
                 double price = rs.getDouble("price");
-                int quality = rs.getInt("quality");
+                int quantity = rs.getInt("quantity");
                 int view = rs.getInt("view");
                 int categoryId = rs.getInt("category_id");
                 Timestamp createdAt = rs.getTimestamp("created_at");
 
-                proList.add(new Product(id, name, description, price, quality, view, categoryId, createdAt));
+                proList.add(new Product(id, name, description, price, quantity, view, categoryId, createdAt));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block

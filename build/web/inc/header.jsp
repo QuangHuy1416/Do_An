@@ -25,7 +25,7 @@
             <div class="header-wrapper">
                 <div class="header-top wrap-column">
                     <div class="header-with-logo">
-                        <a href="#" class="header-with-link">
+                        <a href="HomeServlet" class="header-with-link">
                             <img src="./assets/image/Logo-min.jpg" alt="xstore" class="header-with-img"/>
                         </a>
                     </div>
@@ -131,29 +131,29 @@
                 <div class="header-bottom">
                     <div class="wrap-column">
                         <ul class="menu-list">
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-01.png" alt="chairs" /><br><span>Chairs</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-02.png" alt="outdoor" /><br><span>Outdoor</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-03.png" alt="storage" /><br><span>Storage</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-04.png" alt="dinnerware"/><br><span>Dinnerware</span></a
                                 >
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-05.png" alt="furnishings"/><br><span>Furnishings</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-06.png" alt="lighting" /><br><span>Lighting</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-07.png" alt="curtains" /><br><span>Curtains</span></a>
                             </li>
-                            <li class="menu-item logo-img">
+                            <li class="menu-item">
                                 <a href="ProductServlet" class="menu-link"><img src="./assets/image/icon-08.png" alt="mirrors" /><br><span>Mirrors</span></a>
                             </li>
                         </ul>

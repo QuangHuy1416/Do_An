@@ -13,6 +13,7 @@
                 <h2>Login</h2>
                 <label class="label-decor">Username or email address *</label>
                 <input type="email" name="email" placeholder="${errorsEmail}" value="${email}" class="input-text" required>
+                <c:remove var="errorsEmail" scope="session" />
                 <label class="label-decor">Password *</label>
                 <input type="password" name="password" placeholder="${errorsPassword}" class="input-text" required>
                 <div class="check-login">

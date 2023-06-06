@@ -30,16 +30,13 @@ public class Product {
         this.createAt = createAt;
     }
 
-    public Product(String name, String description, double price, int quantity, int view, int categoryId,
-            Timestamp createAt) {
+    public Product(String name, String description, double price, int quantity, int categoryId) {
         super();
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
-        this.view = view;
         this.categoryId = categoryId;
-        this.createAt = createAt;
     }
 
     public int getId() {

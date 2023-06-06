@@ -1,4 +1,4 @@
-package huy.dev.util;
+package huy.dev.data.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,7 +67,7 @@ public class Faker {
 	}
 
 	public static String randomCode(int size) {
-		 List<String> result = new ArrayList<>();
+		List<String> result = new ArrayList<>();
 	        Consumer<String> appendChar = s -> {
 	            int number = numberRandom(0, s.length() - 1);
 	            result.add("" + s.charAt(number));

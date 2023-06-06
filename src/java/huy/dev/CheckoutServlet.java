@@ -9,7 +9,7 @@ import huy.dev.data.DAO.OrderDAO;
 import huy.dev.data.model.Order;
 import huy.dev.data.model.OrderItem;
 import huy.dev.data.model.User;
-import static huy.dev.util.Faker.randomCode;
+import static huy.dev.data.util.Faker.randomCode;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

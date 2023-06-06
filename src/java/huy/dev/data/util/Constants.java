@@ -15,8 +15,10 @@ public class Constants {
     public static final String PASS = "00Gundam#1416";
 
     public static final int VIEW_NUMBER = 4;
+    public static final int VIEW_LIMIT = 8;
     public static final int ALL = 10000;
     public static final int RELATED_NUMBER = 4;
+    public static final int NUMBER_DAY = 14;
 
-    public static final String UPLOAD_DIR = "assets/admin/img/products";
+    public static final String UPLOAD_DIR = "assets/image/img_product";
 }

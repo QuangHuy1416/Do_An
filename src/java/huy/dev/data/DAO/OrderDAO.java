@@ -19,4 +19,8 @@ public interface OrderDAO {
     public List<Order> findByUser(int id);
 
     public Order findByCode(String code);
+
+    public List<Order> findByStatus(String status);
+
+    public double earningOrderByDay(String date);
 }

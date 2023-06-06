@@ -304,14 +304,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-footer">
-                                <div class="product-category">
+                            <div class="home-product-footer">
+                                <div class="home-product-category">
                                     <a href="#">${product.category.name}</a>
                                 </div>
-                                <h2 class="product-name">
+                                <h2 class="home-product-name">
                                     <a href="#">${product.name}</a>
                                 </h2>
-                                <span class="product-price">
+                                <span class="home-product-price">
                                     $${product.price}
                                 </span>
                             </div>
@@ -327,7 +327,7 @@
             <span>
                 Yes! Send me exclusive offers, personalised, and unique gift ideas, tips for shopping on XStore.
             </span>
-            <div class="deal-info-button">
+            <div class="deal-home-button">
                 <a href="#">View All Product</a>
             </div>
         </div>
@@ -352,31 +352,31 @@
             <div class="categories-slide-wrap border">
                 <div class="img-frame">
                     <a href="#">
-                        <img src="./assets/image/category-02-min.jpeg" alt="bedroom" class="hover-img">
+                        <img src="./assets/image/category-03-min.jpeg" alt="bedroom" class="hover-img">
                     </a>
                 </div>
                 <div class="selection-categories">
-                    <a href="#">Bedroom</a>
+                    <a href="#">Dining Room</a>
                 </div>
             </div>
             <div class="categories-slide-wrap border">
                 <div class="img-frame">
                     <a href="#">
-                        <img src="./assets/image/category-02-min.jpeg" alt="bedroom" class="hover-img">
+                        <img src="./assets/image/category-01-min.jpeg" alt="bedroom" class="hover-img">
                     </a>
                 </div>
                 <div class="selection-categories">
-                    <a href="#">Bedroom</a>
+                    <a href="#">Living Room</a>
                 </div>
             </div>
             <div class="categories-slide-wrap border">
                 <div class="img-frame">
                     <a href="#">
-                        <img src="./assets/image/category-02-min.jpeg" alt="bedroom" class="hover-img">
+                        <img src="./assets/image/category-04-min.jpeg" alt="bedroom" class="hover-img">
                     </a>
                 </div>
                 <div class="selection-categories">
-                    <a href="#">Bedroom</a>
+                    <a href="#">Study Room</a>
                 </div>
             </div>
         </div>
@@ -385,13 +385,16 @@
                 <a href="#"><img src="./assets/image/Logo_1.jpeg" alt="logo"></a>
             </div>
             <div class="logo-wrap logo-img">
-                <a href="#"><img src="./assets/image/Logo_1.jpeg" alt="logo"></a>
+                <a href="#"><img src="./assets/image/Logo_2.jpeg" alt="logo"></a>
             </div>
             <div class="logo-wrap logo-img">
-                <a href="#"><img src="./assets/image/Logo_1.jpeg" alt="logo"></a>
+                <a href="#"><img src="./assets/image/Logo_3.jpeg" alt="logo"></a>
             </div>
             <div class="logo-wrap logo-img">
-                <a href="#"><img src="./assets/image/Logo_1.jpeg" alt="logo"></a>
+                <a href="#"><img src="./assets/image/Logo_4.jpeg" alt="logo"></a>
+            </div>
+            <div class="logo-wrap logo-img">
+                <a href="#"><img src="./assets/image/Logo_5.jpeg" alt="logo"></a>
             </div>
         </div>
     </div>

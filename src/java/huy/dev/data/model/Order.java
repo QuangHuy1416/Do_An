@@ -3,6 +3,7 @@ package huy.dev.data.model;
 import java.sql.Timestamp;
 
 import huy.dev.data.DAO.DatabaseDAO;
+import java.util.List;
 
 public class Order {
 
@@ -71,7 +72,20 @@ public class Order {
         this.createdAT = createdAT;
     }
 
-    public OrderItem getOrderItem() {
-        return DatabaseDAO.getInstance().getOrderItemDAO().find(id);
+    public List<OrderItem> getOrderItems() {
+        return DatabaseDAO.getInstance().getOrderItemDAO().findByOrder(id);
+    }
+    
+    public User getUser() {
+        return DatabaseDAO.getInstance().getUserDAO().find(userId);
+    }
+    
+     public double getTotal() {
+        double total = 0;
+        List<OrderItem> orderItemList = getOrderItems();
+        for (OrderItem orderItem : orderItemList) {
+            total += orderItem.getPrice() * orderItem.getQuantity();
+        }
+        return total;
     }
 }

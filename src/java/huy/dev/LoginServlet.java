@@ -4,7 +4,7 @@
  */
 package huy.dev;
 
-
+import com.oracle.wls.shaded.org.apache.bcel.generic.BREAKPOINT;
 import huy.dev.data.DAO.Database;
 import huy.dev.data.DAO.UserDAO;
 import huy.dev.data.model.User;
@@ -19,7 +19,8 @@ import jakarta.servlet.http.HttpSession;
  * @author KAY
  */
 public class LoginServlet extends BaseServlet {
- @Override
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -44,13 +45,17 @@ public class LoginServlet extends BaseServlet {
         if (user == null) {
             response.sendRedirect("LoginServlet");
             session.setAttribute("errorsEmail", "Invalid email *");
-
         } else {
-            if(user.getPassword().equals(password)){
-                response.sendRedirect("HomeServlet");
-                session.setAttribute("user", user);
-            }
-            else{
+            if (user.getPassword().equals(password)) {
+                if (user.getRole().equals("User")) {
+                    response.sendRedirect("HomeServlet");
+                    session.setAttribute("user", user);
+                }
+                if (user.getRole().equals("Admin")) {
+                    response.sendRedirect("DashboardServlet");
+                    session.setAttribute("user", user);
+                }
+            } else {
                 response.sendRedirect("LoginServlet");
                 session.setAttribute("email", email);
                 session.setAttribute("errorsPassword", "Invalid Password *");
