@@ -33,11 +33,11 @@
                         <form class="header-search-content" action="SearchServlet" method="get">
                             <div class="select-wrap">
                                 <select name="categoryId" class="header-search-select">
-                                        <option selected value="0">All Category</option>
-                                        <c:forEach items="${categoryList}" var="category">
-                                            <option value="${category.id}">${category.name}</option>
-                                        </c:forEach>
-                                    </select>
+                                    <option selected value="0">All Category</option>
+                                    <c:forEach items="${categoryList}" var="category">
+                                        <option value="${category.id}">${category.name}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                             <div class="header-search-wrap">
                                 <input type="text" name="key" class="header-search-input" id="search" placeholder="Search for..."/>
@@ -55,7 +55,7 @@
                         </c:if>
                         <c:if test="${sessionScope.user == null}">
                             <a href="LoginServlet" class="header-link"><span><i class="fa-solid fa-user"></i>&nbspSign in</span></a>
-                        </c:if>
+                                    </c:if>
                         <a href="#" class="header-link"><span><i class="fa-solid fa-arrows-rotate"></i>&nbspCompare</span></a>
                         <a href="#" class="header-link"><span><i class="fa-regular fa-heart"></i>&nbspWishlist</span></a>
                     </div>
@@ -74,7 +74,14 @@
                             </ul>
                         </div>
                         <div class="cart-link">
-                            <a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $0.00</a>
+
+                            <c:if test="${sessionScope.cart != null}">
+                                <a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $${total}</a>
+                            </c:if>
+                            <c:if test="${sessionScope.cart == null}">
+                                <a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $0.00</a>
+                            </c:if>
+                            <!--<a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $0.00</a>-->
                         </div>
                     </div>
                 </div>

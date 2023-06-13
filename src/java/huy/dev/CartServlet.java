@@ -32,9 +32,8 @@ public class CartServlet extends BaseServlet {
         
         Logger.getLogger(CartServlet.class.getName()).log(Level.SEVERE, null, cart);
         request.setAttribute("cart", cart);
-        request.setAttribute("total", total(cart));
+         session.setAttribute("total", total(cart));
         request.getRequestDispatcher("cart.jsp").include(request, response);
-//        request.getRequestDispatcher("cart.jsp").include(request, response);
     }
 
     @Override

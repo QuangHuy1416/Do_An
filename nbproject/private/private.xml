@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/java/huy/dev/ProductDetailServlet.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>42</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/products.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/product/edit.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/data/DAO/ProductDAO.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/home.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/admin/DashboardServlet.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/category/index.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/data/util/Constants.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/inc/indexAdmin.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/admin/product/EditProductServlet.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/inc/slidebar.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/user/index.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/data/impl/ProductImpl.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/admin/dashboard.jsp</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/ProductDetailServlet.java</file>
             <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/HomeServlet.java</file>
-            <file>file:/D:/NetBeans-17/Java/Do_An/web/inc/header_cart.jsp</file>
             <file>file:/D:/NetBeans-17/Java/Do_An/web/cart.jsp</file>
             <file>file:/D:/NetBeans-17/Java/Do_An/web/inc/header.jsp</file>
+            <file>file:/D:/NetBeans-17/Java/Do_An/src/java/huy/dev/CartServlet.java</file>
         </group>
     </open-files>
 </project-private>
