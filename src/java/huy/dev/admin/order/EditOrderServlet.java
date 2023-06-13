@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.order;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.DAO.OrderDAO;
 import huy.dev.data.model.Order;
@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author KAY
  */
-public class EditOrderServlet extends BaseServlet {
+public class EditOrderServlet extends BaseAdminServlet {
 
     OrderDAO orderDao = DatabaseDAO.getInstance().getOrderDAO();
 

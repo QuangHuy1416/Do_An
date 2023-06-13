@@ -35,8 +35,8 @@
                 <img src="./assets/image/box_icon.png" alt="icon">
             </div>
             <div class="box-content">
-                <p class="main-content">Fastest Shipping</p>
-                <p class="sub-content">Order at $39 order</p>
+                <p class="main-content">14 - Days Return</p>
+                <p class="sub-content">Shop with confidence</p>
             </div>
         </div>
         <div class="box-content-wrap col-md-3">
@@ -44,8 +44,8 @@
                 <img src="./assets/image/mess_icon.png" alt="icon">
             </div>
             <div class="box-content">
-                <p class="main-content">Fastest Shipping</p>
-                <p class="sub-content">Order at $39 order</p>
+                <p class="main-content">24/7 Online Support</p>
+                <p class="sub-content">Delivered to home</p>
             </div>
         </div>
     </div>
@@ -306,10 +306,10 @@
                             </div>
                             <div class="home-product-footer">
                                 <div class="home-product-category">
-                                    <a href="#">${product.category.name}</a>
+                                    <a href="ProductDetailServlet?productId=${product.id}">${product.category.name}</a>
                                 </div>
                                 <h2 class="home-product-name">
-                                    <a href="#">${product.name}</a>
+                                    <a href="ProductDetailServlet?productId=${product.id}">${product.name}</a>
                                 </h2>
                                 <span class="home-product-price">
                                     $${product.price}
@@ -328,7 +328,7 @@
                 Yes! Send me exclusive offers, personalised, and unique gift ideas, tips for shopping on XStore.
             </span>
             <div class="deal-home-button">
-                <a href="#">View All Product</a>
+                <a href="ProductServlet">View All Product</a>
             </div>
         </div>
         <div class="deal-img">

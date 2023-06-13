@@ -22,6 +22,7 @@ public class HomeServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        super.doGet(request, response);
         List<Product> productList = DatabaseDAO.getInstance().getProductDAO().hot();
         
         request.setAttribute("productList", productList);

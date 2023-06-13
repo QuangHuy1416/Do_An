@@ -104,6 +104,10 @@
         <servlet-name>DashboardServlet</servlet-name>
         <servlet-class>huy.dev.admin.DashboardServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BaseServlet</servlet-name>
+        <servlet-class>huy.dev.BaseServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -207,5 +211,9 @@
     <servlet-mapping>
         <servlet-name>DashboardServlet</servlet-name>
         <url-pattern>/DashboardServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BaseServlet</servlet-name>
+        <url-pattern>/BaseServlet</url-pattern>
     </servlet-mapping>
 </web-app>

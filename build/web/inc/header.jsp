@@ -7,7 +7,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kay Store</title>
+        <title>Kay Furniture Store</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
@@ -32,62 +32,12 @@
                     <div class="header-search">
                         <form class="header-search-content" action="SearchServlet" method="get">
                             <div class="select-wrap">
-                                <select name="categories-menu" class="header-search-select">
-                                    <option class="level-0" value="all-categories">All categories</option>
-                                    <option class="level-0" value="dinning-bar">Dinning & Bar</option>
-                                    <option class="level-1" value="bar-furniture">Bar Furniture</option>
-                                    <option class="level-1" value="barware">Barware</option>
-                                    <option class="level-1" value="dining-furniture">Dining Furniture</option>
-                                    <option class="level-1" value="dinnerware">Dinnerware</option>
-                                    <option class="level-1" value="serveware">Serveware</option>
-                                    <option class="level-1" value="teaware">Teaware</option>
-                                    <option class="level-0" value="furnishings">Furnishings</option>
-                                    <option class="level-1" value="bed-linen">Bed Linen</option>
-                                    <option class="level-1" value="clocks">Clocks</option>
-                                    <option class="level-1" value="curtains">Curtains</option>
-                                    <option class="level-1" value="cushion-Cover">Cushion & Cover</option>
-                                    <option class="level-1" value="mirrors">Mirrors</option>
-                                    <option class="level-1" value="wall-cabinate">Wall Cabinate</option>
-                                    <option class="level-0" value="furniture">Furniture</option>
-                                    <option class="level-1" value="chairs">Chairs</option>
-                                    <option class="level-1" value="home-office">Home Office</option>
-                                    <option class="level-1" value="recliners">Recliners</option>
-                                    <option class="level-1" value="seating">Seating</option>
-                                    <option class="level-0" value="lighting">Lighting</option>
-                                    <option class="level-1" value="ceiling-lights">Ceiling Lights</option>
-                                    <option class="level-1" value="outdoor-lights">Outdoor Lights</option>
-                                    <option class="level-1" value="table-lamps">Table Lamps</option>
-                                    <option class="level-1" value="wall-lights">Wall Lights</option>
-                                    <option class="level-0" value="mattresses">Mattresses</option>
-                                    <option class="level-1" value="drinkware">Drinkware</option>
-                                    <option class="level-1" value="king-size-beds">King Size Beds</option>
-                                    <option class="level-1" value="queen-size-beds">Queen Size Beds</option>
-                                    <option class="level-1" value="single-beds">Single Beds</option>
-                                    <option class="level-0" value="our-selections">Our Selections</option>
-                                    <option class="level-1" value="bedroom">Bedroom</option>
-                                    <option class="level-1" value="Dining Room">Dining Room</option>
-                                    <option class="level-1" value="living-room">Living Room</option>
-                                    <option class="level-1" value="study-room">Study Room</option>
-                                    <option class="level-0" value="outdoor-2">Outdoor</option>
-                                    <option class="level-1" value="arificial-plants">Arificial Plants</option>
-                                    <option class="level-1" value="garden-decor">Garden Decor</option>
-                                    <option class="level-1" value="natural-plants">Natural Plants</option>
-                                    <option class="level-1" value="outdoor-furniture">Outdoor Furniture</option>
-                                    <option class="level-1" value="planter-stands">Planter Stands</option>
-                                    <option class="level-1" value="pots-planters">Planters</option>
-                                    <option class="level-0" value="storage">Storage</option>
-                                    <option class="level-1" value="bar-furniture">Bar Furniture</option>
-                                    <option class="level-1" value="book-cases">Book Cases</option>
-                                    <option class="level-1" value="entertainment">Entertainment</option>
-                                    <option class="level-1" value="outdoor">Outdoor</option>
-                                    <option class="level-1" value="shoe-racks">Shoe Racks</option>
-                                    <option class="level-1" value="wardrobes">Wardrobes</option>
-                                    <option class="level-0" value="wall-accents">Wall Accents</option>
-                                    <option class="level-1" value="canvas-paintings">Canvas Paintings</option>
-                                    <option class="level-1" value="photoframes">Photoframes</option>
-                                    <option class="level-1" value="wall-art">Wall Art</option>
-                                    <option class="level-1" value="wall-shelves">Wall Shelves</option>
-                                </select>
+                                <select name="categoryId" class="header-search-select">
+                                        <option selected value="0">All Category</option>
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <option value="${category.id}">${category.name}</option>
+                                        </c:forEach>
+                                    </select>
                             </div>
                             <div class="header-search-wrap">
                                 <input type="text" name="key" class="header-search-input" id="search" placeholder="Search for..."/>

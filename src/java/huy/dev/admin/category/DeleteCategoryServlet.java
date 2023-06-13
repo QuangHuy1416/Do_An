@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.category;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author KAY
  */
-public class DeleteCategoryServlet extends BaseServlet {
+public class DeleteCategoryServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

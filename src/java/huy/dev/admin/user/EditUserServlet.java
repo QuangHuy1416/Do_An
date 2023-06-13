@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.user;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.DAO.UserDAO;
 import huy.dev.data.model.User;
@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author KAY
  */
-public class EditUserServlet extends BaseServlet {
+public class EditUserServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

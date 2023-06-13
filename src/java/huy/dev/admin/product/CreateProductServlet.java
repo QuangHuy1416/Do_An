@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.product;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.DAO.GalleryDAO;
 import huy.dev.data.model.Category;
@@ -28,7 +28,7 @@ import java.util.List;
         maxFileSize = 1024 * 1024 * 50, // 50 MB
         maxRequestSize = 1024 * 1024 * 100 // 100 MB
 )
-public class CreateProductServlet extends BaseServlet {
+public class CreateProductServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

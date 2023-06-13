@@ -16,14 +16,14 @@
         <link rel="stylesheet" href="./assets/css/product_detail_css.css" />
         <link rel="stylesheet" href="./assets/css/shopping_cart_css.css" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <title>Kay Store</title>
+        <title>Kay Furniture Store</title>
     </head>
     <body>
         <div class="shopping-cart-header border-bottom">
             <header class="container">
                 <div class="row">
                     <div class="header-with-logo col-md-6">
-                        <a href="#" class="header-with-link">
+                        <a href="HomeServlet" class="header-with-link">
                             <img src="./assets/image/Logo-min.jpg" alt="xstore" class="header-with-img"/>
                         </a>
                     </div>

@@ -18,7 +18,7 @@ public class ProductImpl implements ProductDAO {
     Connection con = MySQLDriver.getInstance().getConnection();
 
     @Override
-     public int insert(Product product) {
+    public int insert(Product product) {
         String sql = "INSERT INTO PRODUCTS(ID, NAME, DESCRIPTION, PRICE, QUANTITY, CATEGORY_ID) VALUES(NULL, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement stmt = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
@@ -85,7 +85,7 @@ public class ProductImpl implements ProductDAO {
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, productId);
-            
+
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String name = rs.getString("name");
@@ -190,7 +190,7 @@ public class ProductImpl implements ProductDAO {
 
     @Override
     public List<Product> relatedProductList(Product product) {
-     List<Product> proList = new ArrayList<>();
+        List<Product> proList = new ArrayList<>();
         String sql = "SELECT * FROM PRODUCTS WHERE CATEGORY_ID = ? LIMIT ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -219,7 +219,7 @@ public class ProductImpl implements ProductDAO {
 
     @Override
     public List<Product> findByName(String key) {
-     List<Product> proList = new ArrayList<>();
+        List<Product> proList = new ArrayList<>();
         String sql = "SELECT * FROM PRODUCTS WHERE NAME LIKE ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -243,6 +243,21 @@ public class ProductImpl implements ProductDAO {
             e.printStackTrace();
         }
         return proList;
+    }
+
+    @Override
+    public boolean updateView(Product product) {
+        String sql = "UPDATE PRODUCTS SET view = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, product.getView() + 1);
+            stmt.setInt(2, product.getId());
+            return stmt.execute();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

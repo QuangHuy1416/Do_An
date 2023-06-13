@@ -1,10 +1,10 @@
 <%@include file="../inc/indexAdmin.jsp" %>
-<h1 class="h3 mb-2 text-gray-800">Products</h1>
+<h1 class="h3 mb-2 text-gray-800">Users</h1>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+        <h6 class="m-0 font-weight-bold text-primary">User List</h6>
     </div>
     <div class="card-body">
 
@@ -40,7 +40,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
 <%@include file="../inc/footer.jsp" %>

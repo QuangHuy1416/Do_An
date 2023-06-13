@@ -9,6 +9,8 @@ public interface ProductDAO {
     public int insert(Product product);
 
     public boolean update(Product product);
+    
+    public boolean updateView(Product product);
 
     public boolean delete(int productId);
 

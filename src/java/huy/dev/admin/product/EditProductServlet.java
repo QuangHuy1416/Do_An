@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.product;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.DAO.GalleryDAO;
 import huy.dev.data.DAO.ProductDAO;
@@ -18,7 +18,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -30,7 +29,7 @@ import java.util.List;
         maxFileSize = 1024 * 1024 * 50, // 50 MB
         maxRequestSize = 1024 * 1024 * 100 // 100 MB
 )
-public class EditProductServlet extends BaseServlet {
+public class EditProductServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.order;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.DAO.OrderDAO;
 import huy.dev.data.model.Order;
@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author KAY
  */
-public class IndexOrderServlet extends BaseServlet {
+public class IndexOrderServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

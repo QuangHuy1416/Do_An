@@ -18,16 +18,18 @@ import java.util.List;
  * @author KAY
  */
 public class ProductDetailServlet extends BaseServlet {
-   @Override
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("productId"));
-        
+
         ProductDAO productDao = DatabaseDAO.getInstance().getProductDAO();
         Product product = productDao.find(productId);
-        
+
+        productDao.updateView(product);
         List<Product> relatedProductList = productDao.relatedProductList(product);
-        
+
         request.setAttribute("product", product);
         request.setAttribute("relatedProductList", relatedProductList);
         request.getRequestDispatcher("productDetail.jsp").include(request, response);
@@ -37,4 +39,5 @@ public class ProductDetailServlet extends BaseServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
+
 }

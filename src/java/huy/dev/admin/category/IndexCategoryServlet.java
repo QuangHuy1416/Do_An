@@ -4,7 +4,7 @@
  */
 package huy.dev.admin.category;
 
-import huy.dev.BaseServlet;
+import huy.dev.admin.BaseAdminServlet;
 import huy.dev.data.DAO.DatabaseDAO;
 import huy.dev.data.model.Category;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author KAY
  */
-public class IndexCategoryServlet extends BaseServlet {
+public class IndexCategoryServlet extends BaseAdminServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
