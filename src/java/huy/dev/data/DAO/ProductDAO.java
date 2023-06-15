@@ -25,4 +25,6 @@ public interface ProductDAO {
     public List<Product> relatedProductList(Product product);
 
     public List<Product> findByName(String key);
+    
+     public List<Product> findByCategoryAndName(int categoryId, String key);
 }

@@ -81,7 +81,6 @@
                             <c:if test="${sessionScope.cart == null}">
                                 <a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $0.00</a>
                             </c:if>
-                            <!--<a class="menu-link" href="CartServlet"><i class="fa-solid fa-cart-shopping"></i>&nbspCart $0.00</a>-->
                         </div>
                     </div>
                 </div>

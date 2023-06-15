@@ -20,16 +20,16 @@ import java.util.List;
  */
 public class BaseServlet extends HttpServlet {
 
-     @Override
+    @Override
     public void init() throws ServletException {
         DatabaseDAO.init(new Database());
     }
- 
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Category> categoryList = DatabaseDAO.getInstance().getCategoryDAO().findAll();
         request.setAttribute("categoryList", categoryList);
     }
-
+  
 }

@@ -64,10 +64,11 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public Gallery find(int galleryId) {
-        String sql = "SELECT * FROM GALLERIES";
+        String sql = "SELECT * FROM GALLERIES WHERE ID = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, galleryId);
+            
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String url = rs.getString("url");
@@ -129,7 +130,7 @@ public class GalleryImpl implements GalleryDAO {
 
     @Override
     public boolean deleteByProduct(int productId) {
-         String sql = "DELETE FROM GALLERIES WHERE product_id = ?";
+        String sql = "DELETE FROM GALLERIES WHERE product_id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, productId);

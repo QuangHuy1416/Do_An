@@ -4,7 +4,6 @@
  */
 package huy.dev;
 
-import com.oracle.wls.shaded.org.apache.bcel.generic.BREAKPOINT;
 import huy.dev.data.DAO.Database;
 import huy.dev.data.DAO.UserDAO;
 import huy.dev.data.model.User;
@@ -23,6 +22,7 @@ public class LoginServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        super.doGet(request, response);
         HttpSession session = request.getSession();
         if (session.getAttribute("user") != null) {
             response.sendRedirect("HomeServlet");

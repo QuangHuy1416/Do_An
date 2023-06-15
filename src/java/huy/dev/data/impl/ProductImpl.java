@@ -260,4 +260,33 @@ public class ProductImpl implements ProductDAO {
         return false;
     }
 
+    @Override
+    public List<Product> findByCategoryAndName(int categoryId, String key) {
+            List<Product> proList = new ArrayList<>();
+        String sql = "SELECT * FROM PRODUCTS WHERE CATEGORY_ID = ? AND NAME LIKE ?";
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, categoryId);
+            stmt.setString(2, "%" + key + "%");
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                double price = rs.getDouble("price");
+                int quantity = rs.getInt("quantity");
+                int view = rs.getInt("view");
+                Timestamp createdAt = rs.getTimestamp("created_at");
+
+                proList.add(new Product(id, name, description, price, quantity, view, categoryId, createdAt));
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return proList;
+    
+    }
+
 }

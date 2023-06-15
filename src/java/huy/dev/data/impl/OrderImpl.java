@@ -74,7 +74,7 @@ public class OrderImpl implements OrderDAO {
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, orderId);
-            
+
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String code = rs.getString("code");
@@ -116,22 +116,20 @@ public class OrderImpl implements OrderDAO {
     }
 
     @Override
-    public List<Order> findByUser(int _userId) {
+    public List<Order> findByUser(int userId) {
         List<Order> orderList = new ArrayList<>();
-        String sql = "SELECT * FROM ORDERS";
+        String sql = "SELECT * FROM ORDERS WHERE user_id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, userId);
+            
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                int userId = rs.getInt("user_id");
-                if (_userId == userId) {
-                    int id = rs.getInt("id");
-                    String code = rs.getString("code");
-                    String status = rs.getString("status");
-                    Timestamp createdAt = rs.getTimestamp("created_at");
-                    orderList.add(new Order(id, code, status, userId, createdAt));
-                }
+                int id = rs.getInt("id");
+                String code = rs.getString("code");
+                String status = rs.getString("status");
+                Timestamp createdAt = rs.getTimestamp("created_at");
+                orderList.add(new Order(id, code, status, userId, createdAt));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block

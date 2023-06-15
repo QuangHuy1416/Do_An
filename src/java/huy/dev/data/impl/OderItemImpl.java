@@ -67,10 +67,11 @@ public class OderItemImpl implements OrderItemDAO {
 
     @Override
     public OrderItem find(int orderItemId) {
-        String sql = "SELECT * FROM ORDER_ITEMS";
+        String sql = "SELECT * FROM ORDER_ITEMS WHERE id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, orderItemId);
+            
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 int quantity = rs.getInt("quantity");
@@ -112,22 +113,20 @@ public class OderItemImpl implements OrderItemDAO {
     }
 
     @Override
-    public List<OrderItem> findByProduct(int _productId) {
+    public List<OrderItem> findByProduct(int productId) {
         List<OrderItem> orderItemList = new ArrayList<>();
-        String sql = "SELECT * FROM ORDER_ITEMS";
+        String sql = "SELECT * FROM ORDER_ITEMS WHERE product_id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, productId);
+            
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                int productId = rs.getInt("product_id");
-                if (_productId == productId) {
-                    int id = rs.getInt("id");
-                    int quantity = rs.getInt("quantity");
-                    double price = rs.getDouble("price");
-                    int orderId = rs.getInt("order_id");
-                    orderItemList.add(new OrderItem(id, quantity, price, orderId, productId));
-                }
+                int id = rs.getInt("id");
+                int quantity = rs.getInt("quantity");
+                double price = rs.getDouble("price");
+                int orderId = rs.getInt("order_id");
+                orderItemList.add(new OrderItem(id, quantity, price, orderId, productId));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -137,22 +136,19 @@ public class OderItemImpl implements OrderItemDAO {
     }
 
     @Override
-    public List<OrderItem> findByOrder(int _orderId) {
+    public List<OrderItem> findByOrder(int orderId) {
         List<OrderItem> orderItemList = new ArrayList<>();
-        String sql = "SELECT * FROM ORDER_ITEMS";
+        String sql = "SELECT * FROM ORDER_ITEMS WHERE order_id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
-
+            stmt.setInt(1, orderId);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                int orderId = rs.getInt("order_id");
-                if (_orderId == orderId) {
-                    int id = rs.getInt("id");
-                    int quantity = rs.getInt("quantity");
-                    double price = rs.getDouble("price");
-                    int productId = rs.getInt("product_id");
-                    orderItemList.add(new OrderItem(id, quantity, price, orderId, productId));
-                }
+                int id = rs.getInt("id");
+                int quantity = rs.getInt("quantity");
+                double price = rs.getDouble("price");
+                int productId = rs.getInt("product_id");
+                orderItemList.add(new OrderItem(id, quantity, price, orderId, productId));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
