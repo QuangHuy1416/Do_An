@@ -52,23 +52,14 @@ public class EditProductServlet extends BaseAdminServlet {
         Product product = productDAO.find(productId);
 
         String name = request.getParameter("name");
-        String des = request.getParameter("des");
+        String description = request.getParameter("description");
         double price = Double.parseDouble(request.getParameter("price"));
 
-//        int quantity = 0;
-//
-//        try {
-//            quantity = Integer.parseInt(request.getParameter("quantity"));
-//        } catch (NumberFormatException e) {
-//            HttpSession session = request.getSession();
-//            response.sendRedirect("EditProductServlet");
-//            session.setAttribute("errorsQuantity", "Invalid Quantity *");
-//        }
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         int categoryId = Integer.parseInt(request.getParameter("categoryId"));
 
         product.setName(name);
-        product.setDescription(des);
+        product.setDescription(description);
         product.setPrice(price);
         product.setQuantity(quantity);
         product.setCategoryId(categoryId);

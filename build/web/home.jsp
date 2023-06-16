@@ -49,6 +49,20 @@
             </div>
         </div>
     </div>
+    <div class="product-deal">
+        <div class="deal-info">
+            <h2>Deal of the month</h2>
+            <span>
+                Yes! Send me exclusive offers, personalised, and unique gift ideas, tips for shopping on XStore.
+            </span>
+            <div class="deal-home-button">
+                <a href="ProductServlet">View All Product</a>
+            </div>
+        </div>
+        <div class="deal-img">
+            <img src="./assets/image/Image2-min.jpeg" alt="banner2" class="hover-img">
+        </div>
+    </div>
     <div class="all-categories margin-for-div">
         <h1>List Of All Categories</h1>
         <div class="all-categories-wrap margin-for-div">
@@ -321,20 +335,7 @@
             </div>
         </div>
     </div>
-    <div class="product-deal">
-        <div class="deal-info">
-            <h2>Deal of the month</h2>
-            <span>
-                Yes! Send me exclusive offers, personalised, and unique gift ideas, tips for shopping on XStore.
-            </span>
-            <div class="deal-home-button">
-                <a href="ProductServlet">View All Product</a>
-            </div>
-        </div>
-        <div class="deal-img">
-            <img src="./assets/image/Image2-min.jpeg" alt="banner2" class="hover-img">
-        </div>
-    </div>
+    
     <div class="categories-slide section1">
         <h1 class="main-title"><span>Shop Our Selection</span></h1>
         <span>Sem vitae tincidunt sed rhoncus</span>

@@ -37,7 +37,7 @@ public class SearchServlet extends BaseServlet {
         }
         
         request.setAttribute("productList", productList);
-        request.getRequestDispatcher("products.jsp").include(request, response);
+        request.getRequestDispatcher("search.jsp").include(request, response);
     }
 
     @Override

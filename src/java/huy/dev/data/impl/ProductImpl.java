@@ -46,7 +46,7 @@ public class ProductImpl implements ProductDAO {
 
     @Override
     public boolean update(Product product) {
-        String sql = "UPDATE PRODUCTS SET name = ?, description = ?, price = ?, quantity = ?, view = ?, category_id = ?, created_at = ? WHERE id = ?";
+        String sql = "UPDATE PRODUCTS SET name = ?, description = ?, price = ?, quantity = ?, view = ?, category_id = ? WHERE id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, product.getName());
@@ -55,7 +55,8 @@ public class ProductImpl implements ProductDAO {
             stmt.setInt(4, product.getQuantity());
             stmt.setInt(5, product.getView());
             stmt.setInt(6, product.getCategoryId());
-            stmt.setTimestamp(7, product.getCreateAt());
+            stmt.setInt(7, product.getId());
+            
             return stmt.execute();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
