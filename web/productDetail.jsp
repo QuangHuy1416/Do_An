@@ -9,6 +9,15 @@
     <div class="row">
         <div class="img-preview col-md-6 border">
             <img src="${product.thumbnail}" alt="product">
+            <div class="img-bottom-wrap">
+                <div class="row">
+                    <div class="product-img-bottom">
+                        <c:forEach items="${product.galleries}" var="image">
+                            <img src="${image.url}" alt="" class="bottom-img border">
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="product-detail-wrap col-md-6">
             <h1 class="product-name">${product.name}</h1>

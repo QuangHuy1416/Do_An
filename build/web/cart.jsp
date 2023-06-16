@@ -94,7 +94,7 @@
                     </p>
                 </div>
                 <div class="checkout-btn">
-                    <a href="CheckoutServlet">Proceed To Checkout</a>
+                    <a href="CheckoutServlet" class="back-product-btn">Proceed To Checkout</a>
                 </div>
                 <div class="shoppping-cart-btn">
                     <a href="ProductServlet" class="back-product-btn">Continue Shopping</a>
