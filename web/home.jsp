@@ -7,10 +7,30 @@
 <%@include file="./inc/header.jsp"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <div class="container">
-    <div class="banner-content margin-for-div">
-        <img src="./assets/image/02-BANNER.jpg" alt="banner">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/image/02-BANNER.jpg" class="banner-img" alt="banner">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/image/banner_2.jpg" class="banner-img" alt="banner">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/image/banner_3.jpg" class="banner-img" alt="banner">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/image/banner_4.jpg" class="banner-img" alt="banner">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-
     <div class="content-outside row margin-for-div">
         <div class="box-content-wrap col-md-3">
             <div class="sticker-content">
@@ -335,7 +355,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="categories-slide section1">
         <h1 class="main-title"><span>Shop Our Selection</span></h1>
         <span>Sem vitae tincidunt sed rhoncus</span>
@@ -400,5 +420,6 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
 <%@include file="./inc/footer.jsp"%>
 

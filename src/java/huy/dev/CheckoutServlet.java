@@ -28,8 +28,6 @@ public class CheckoutServlet extends BaseServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         if (user == null) {
-//            response.setHeader("referer", "CheckoutServlet");
-//            response.sendRedirect("LoginServlet?referer=CheckoutServlet");
             response.sendRedirect("LoginServlet");
         } else {
             processCheckout(request, user.getId());
@@ -45,7 +43,6 @@ public class CheckoutServlet extends BaseServlet {
     private void processCheckout(HttpServletRequest request, int id) {
         OrderDAO orderDao = DatabaseDAO.getInstance().getOrderDAO();
         Order order = new Order(randomCode(8), Order.PENDING, id);
-//        Order order = new Order(randomCode(8), "PANDING", id);
         orderDao.insert(order);
 
         order = orderDao.findByCode(order.getCode());

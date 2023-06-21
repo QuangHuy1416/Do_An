@@ -3,10 +3,10 @@
   margin-bottom: 3rem;
 }
 
-.banner-content > img {
-  width: 100%;
+.banner-img{
+  width: 130.5rem;
+  height: 58rem;
 }
-
 /* box-content */
 .box-content-wrap {
   display: flex;
